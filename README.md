@@ -8,7 +8,7 @@ To show the performance of our methods, we recorded a participant who was asked 
 ![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot1.jpg)
 #### Fig. 1
 
-![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot2.eps)
+![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot2.jpg)
 #### Fig. 1
 Please, install  the following packages:
 
