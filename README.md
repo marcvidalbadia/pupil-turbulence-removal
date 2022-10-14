@@ -7,4 +7,4 @@ This repository contains the source code for the ROE (response to ocular event) 
 
 --
 
-[1] Vidal, M. ; Onderdijk, K.E.; Aguilera , A.M.; Six, J.; Maes, P-J.; Fritz, T.H.; Leman, M. Cholinergic-related pupil activity reflects level of emotionality during motor performance, 2022.
+[1] Vidal, M., Onderdijk, K.E., Aguilera , A.M., Six, J., Maes, P-J., Fritz, T.H., Leman, M. Cholinergic-related pupil activity reflects level of emotionality during motor performance, 2022.
