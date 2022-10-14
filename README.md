@@ -4,7 +4,7 @@ This repository contains a set of routines for pupilometry artifact removal writ
 
 To show the performance of our methods, we recorded a participant who was asked to blink four times synchronised with an auditory beat (2 s) in two different time frames separated by pauses. The beat also appeared 4 times with a different sound during the pauses to alert the participant of the beginning of the blinking task. Blinks were intentionally performed longer to see their effect on the signal. During the pauses, eventual (faster) blinks also occurred. We recorded the participant in a dark environment where, a time before the beginning of the task, a white cross was projected to the scene: this produced a slow ROE not related to blinking activity. 
 
-![alt text here](path-to-image-here)
+![alt text here](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot1.jpg)
 
 Please, install  the following packages:
 
