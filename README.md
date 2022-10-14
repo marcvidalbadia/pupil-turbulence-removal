@@ -2,7 +2,7 @@
 
 ## Removal of responses to ocular events
 
-This repository contains a set of routines for pupilometry artifact removal written in R. The main algorithm described in [1] detects slow and high-frequency turbulences produced by changes in retinal luminance and removes them without affecting the high frequency activity of the pupil. We call this turbulent activity “responses to ocular events” (ROEs). The algorithm is unsupervised, meaning that it does not rely on any artifact benchmark. To optimise the procedure, the user has to select a	 dispersion hyperparameter. By default, we advise using `sd.factor= 3` (conservative), although we model this parameter as a negative exponential that depends on the blink rate. The algorithm was specifically designed to enhance the estimation of cognitive-related pupil activity during complex motor tasks.
+This repository contains a set of routines for pupilometry artifact removal written in R. The main algorithm described in [1] detects slow and high-frequency turbulences produced by changes in retinal luminance and removes them without affecting the high frequency activity of the pupil. We call this turbulent activity “responses to ocular events” (ROEs). The algorithm is unsupervised, meaning that it does not rely on any artifact benchmark. To optimise the procedure, the user has to select a	 dispersion hyperparameter. By default, we advise using `sd.factor = 3` (conservative), although we model this parameter as a negative exponential that depends on the blink rate. The algorithm was specifically designed to enhance the estimation of cognitive-related pupil activity during complex motor tasks.
 
 
 --
