@@ -1,4 +1,4 @@
-This repository contains the source code for the ROE (response to ocular event) algorithm in [1].
+**This repository contains the source code for the ROE (response to ocular event) algorithm in [1].**
 
 ## Removal of responses to ocular events
 
