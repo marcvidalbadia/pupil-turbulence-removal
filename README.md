@@ -22,7 +22,7 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 #install.packages("imputeTS")
 source("fn.R") #load functions to the environment
 y <- read.csv('blinks.csv')$x #read the data
-y <- pup.med(y, ant = 0.1, post = 0.2, method = "t-Student")[[1]]
+y <- pup.med(y, ant = 0.1, post = 0.2, method = "t-Student")[[1]] #Time series reconstruction using t-Student method
 ```
 --
 
