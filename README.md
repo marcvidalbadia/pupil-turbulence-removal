@@ -4,7 +4,7 @@ This repository contains a set of routines written in R for pupilometry artifact
 
 To show the performance of our methods, we recorded a participant who was asked to blink four times synchronised with an auditory beat (of 2 s duration) in two time frames (shaded in red, see Fig. 1) separated by pauses. The beat appeared 4 times with a different sound during the pauses to alert the participant of the beginning/end of the blinking task. Blinks were intentionally performed longer to see their effect on the signal. During the pauses, eventual (faster) blinks also occurred.  We recorded pupil activity in a dark environment where, a time before the beginning of the task, a white cross was projected to the scene: this produced a slow ROE not related to blinking activity. 
 
-Blinks/pupil occlusions are recorded as NA, 0 or even negative time observations in the raw signal. Partial occlusions of the pupil are not easily detectable and one should examine the data after the removal of these points to check for other unusual activity. All this observations are usually removed from 100 ms before the presumed rapid closing of the eyelid until 200 ms after. We implemented this procedure in the R function `pup.med` with three different kinds of data imputation: Gaussian [3], t-Student [2] and Kalman filtering [3]. Their stochastic performance is shown in Fig. 1.
+Blinks/pupil occlusions are recorded as NA, 0 or even negative time observations in the raw signal. Partial occlusions of the pupil are not easily detectable and one should examine the data after the removal of these points to check for other unusual activity. All these observations are usually removed from 100 ms before the presumed rapid closing of the eyelid until 200 ms after. We implemented this procedure in the R function `pup.med` with three different kinds of data imputation: Gaussian [3], t-Student [2] and Kalman filtering [3]. Their stochastic performance is shown in Fig. 1.
 
 ![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/P1.jpg)
 #### Fig. 1. Raw pupil signal and reconstructed signal using data imputation.
@@ -53,7 +53,7 @@ y <- y-(my <- mean(y))
 lines(arg,y <- signal::filtfilt(bf,y) + my, lwd=2, col="darkgreen")
 
 ```
---
+## References
 
 [1] M. Vidal, K. E. Onderdijk, A. M. Aguilera, J. Six, P-J. Maes and T. H. Fritz, M. Leman. "Cholinergic-related pupil activity reflects level of emotionality during motor performance", 2022.
 
