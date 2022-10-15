@@ -18,8 +18,9 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 Please, install  the following packages:
 
 ```R
-install.packages("imputeFin")
-install.packages("imputeTS")
+#install.packages("imputeFin")
+#install.packages("imputeTS")
+y <- read.csv('blinks.csv')$x #read the data
 ```
 --
 
