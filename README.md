@@ -25,11 +25,10 @@ y <- read.csv('blinks.csv')$x #read the data
 ry <- pup.med(y, ant=0.1, post=0.2, method="t-Student")
 y <- ry$Pupilseries #reconstructed pupil signal
 
-
+#Plot the reconstructed data
 duration <- length(y)/30
 arg <- seq(0,duration,duration/length(y))[1:length(y)]
 plot(arg, y, ylab="Pupil diameter", xlab="Time (s)", type="l", main="ROE correction")
-
 
 #Low frequency ROE correction
 N <- length(y)
@@ -38,7 +37,6 @@ for (turbi in seq(0.002,0.1,0.001)) {
   y <- y[1:N]
   y <- turbulence.corrector(y,W=c(0,turbi), sd.factor=3)
 }
-
 
 #High frequency ROE correction
 y <- y-(my2 <- mean(y))
@@ -49,11 +47,9 @@ for (turbi in seq(0.04,0.1,0.001)) {
 
 lines(arg,y <- y+my+my2, col="orange")
 
-
 #Final smoothing (10 Hz)
 bf <- signal::butter(3, c(0,0.1), type="pass")
 y <- y-(my <- mean(y)) 
-
 lines(arg,y <- signal::filtfilt(bf,y) + my, lwd=2, col="darkgreen")
 
 ```
