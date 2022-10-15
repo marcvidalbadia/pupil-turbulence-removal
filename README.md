@@ -22,7 +22,13 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 #install.packages('imputeTS')
 source("fn.R") #load functions to the environment
 y <- read.csv('blinks.csv')$x #read the data
-y <- pup.med(y, ant=0.1, post=0.2, method="t-Student")[[1]] #Time series reconstruction using t-Student method
+ry <- pup.med(y, ant=0.1, post=0.2, method="t-Student")
+y <- ry$Pupilseries #reconstructed pupil signal
+
+
+duration <- length(y)/30
+arg <- seq(0,duration,duration/length(y))[1:length(y)]
+plot(arg, y, ylab="Pupil diameter", xlab="Time (s)", type="l", main="ROE correction")
 ```
 --
 
