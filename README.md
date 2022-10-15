@@ -47,7 +47,7 @@ for (turbi in seq(0.04,0.1,0.001)) {
 
 lines(arg,y <- y+my+my2, col="orange")
 
-#Final smoothing (10 Hz)
+#Final smoothing (LPF at 10 Hz)
 bf <- signal::butter(3, c(0,0.1), type="pass")
 y <- y-(my <- mean(y)) 
 lines(arg,y <- signal::filtfilt(bf,y) + my, lwd=2, col="darkgreen")
