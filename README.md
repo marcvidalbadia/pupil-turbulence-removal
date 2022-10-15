@@ -9,7 +9,7 @@ To show the performance of our methods, we recorded a participant who was asked 
 #### Fig. 1. Raw pupil signal and blink corrected signal using data imputation.
 
 ![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot2b.jpg)
-#### Fig. 2. ROE corrected signal.
+#### Fig. 2. ROE corrected pupil signal.
 Please, install  the following packages:
 
 ```R
