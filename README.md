@@ -15,9 +15,8 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 #### Fig. 2. ROE corrected pupil signal.
 
 ## Methods in practice
-Please, install  the following packages:
-
 ```R
+#Uncomment to install the following packages
 #install.packages("imputeFin")
 #install.packages("imputeTS")
 y <- read.csv('blinks.csv')$x #read the data
