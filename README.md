@@ -21,6 +21,7 @@ Please, install  the following packages:
 #install.packages("imputeFin")
 #install.packages("imputeTS")
 y <- read.csv('blinks.csv')$x #read the data
+y <- pup.med(y, ant = 0.2, post = 0.1, method="t-Student")[[1]];
 ```
 --
 
