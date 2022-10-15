@@ -13,6 +13,8 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 
 ![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot2b.jpg)
 #### Fig. 2. ROE corrected pupil signal.
+
+## Methods in practice
 Please, install  the following packages:
 
 ```R
