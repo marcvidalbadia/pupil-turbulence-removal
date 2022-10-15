@@ -11,7 +11,7 @@ Blinks/pupil occlusions are recorded as NA, 0 or even negative time observations
 
 The removal of ROEs is conducted in two steps, which allows to detect different kinds of ROEs (see [1] for further details). Results of this procedure are shown in Fig. 2. <!-- Note that the grey lines in Fig. 2 are smooth nonlinear spaces of the pupil signal where it is supposed these turbulences can be located.-->
 
-![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot2b.jpg)
+![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/P2.jpg)
 #### Fig. 2. ROE corrected pupil signal.
 
 ## Methods in practice
