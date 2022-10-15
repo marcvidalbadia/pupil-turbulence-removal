@@ -20,7 +20,7 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 #install.packages("imputeFin")
 #install.packages("imputeTS")
 y <- read.csv('blinks.csv')$x #read the data
-y <- pup.med(y, ant = 0.2, post = 0.1, method="t-Student")[[1]];
+y <- pup.med(y, ant = 0.1, post = 0.2, method = "t-Student")[[1]];
 ```
 --
 
