@@ -23,7 +23,7 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 source("fn.R") #load functions to the environment
 y <- read.csv('blinks.csv')$x #read the data
 ry <- pup.med(y, ant=0.1, post=0.2, method="t-Student")
-y <- ry$Pupilseries #reconstructed pupil signal
+y <- ry$Pupildata #reconstructed pupil signal
 
 #Plot the reconstructed data
 duration <- length(y)/30
