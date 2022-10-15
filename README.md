@@ -8,7 +8,7 @@ To show the performance of our methods, we recorded a participant who was asked 
 ![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot1.jpg)
 #### Fig. 1. Raw pupil signal and blink corrected signal using data imputation.
 
-Blinks can be detected as NA, 0 or even negative time observations in the raw signal. Partial occlusions of the pupil are not easily detectable and usually, one should examine the data after the removal of these points to check for other unusual activity. These observations are usually removed from 100 ms before until 200 ms after the rapid closing of the eyelid. To solve the issue of the missing observations, we implemented in the R function `pup.med` three different kinds of data imputation: Gaussian [3], t-Student [2] and Kalman filtering [3]. Their stochastic performance is shown in Fig. 1. 
+Blinks can be detected as NA, 0 or even negative time observations in the raw signal. Partial occlusions of the pupil are not easily detectable and usually, one should examine the data after the removal of these points to check for other unusual activity. These observations are usually removed from 100 ms before until 200 ms after the rapid closing of the eyelid. To solve the issue of the missing observations, we implemented in the R function `pup.med` three different kinds of data imputation: Gaussian [3], t-Student [2] and Kalman filter [3]. Their stochastic performance is shown in Fig. 1. 
 
 ![Fig. 1](https://github.com/m-vidal/pupil-turbulence-removal/blob/main/plots/plot2b.jpg)
 #### Fig. 2. ROE corrected pupil signal.
