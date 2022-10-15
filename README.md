@@ -40,7 +40,7 @@ for (turbi in seq(0.002,0.1,0.001)) {
 }
 
 
-#High frequency ROE correction.
+#High frequency ROE correction
 y <- y-(my2 <- mean(y))
 for (turbi in seq(0.04,0.1,0.001)) {
   y <- y[1:N]
@@ -48,6 +48,13 @@ for (turbi in seq(0.04,0.1,0.001)) {
 }
 
 lines(arg,y <- y+my+my2, col="orange")
+
+
+#Final smoothing (10 Hz)
+bf <- signal::butter(3, c(0,0.1), type="pass")
+y <- y-(my <- mean(y)) 
+
+lines(arg,y <- signal::filtfilt(bf,y) + my, lwd=2, col="darkgreen")
 
 ```
 --
