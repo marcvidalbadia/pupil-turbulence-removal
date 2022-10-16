@@ -16,6 +16,8 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 
 ## Methods in practice
 ```R
+#Download the repository and copy this code chunk to a new R script
+#setwd(~/pupil-turbulence-removal) #set the working directory 
 #Uncomment to install the packages if necessary
 #install.packages('signal')
 #install.packages('imputeFin')
