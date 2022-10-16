@@ -25,7 +25,7 @@ y <- read.csv('blinks.csv')$x #read the data
 ry <- pup.med(y, ant=0.1, post=0.2, method="t-Student")
 y <- ry$Pupildata #reconstructed pupil signal
 
-#Plot the reconstructed data
+#Plot the ROE corrected data
 duration <- length(y)/30
 arg <- seq(0,duration,duration/length(y))[1:length(y)]
 plot(arg, y, ylab='Pupil diameter', xlab='Time (s)', type='l', main='ROE correction')
