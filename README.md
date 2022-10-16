@@ -1,3 +1,5 @@
+Supplementary Online Material for M. Vidal, K. E. Onderdijk, A. M. Aguilera, J. Six, P-J. Maes and T. H. Fritz, M. Leman. "Cholinergic-related pupil activity reflects level of emotionality during motor performance", 2022.
+
 ## Removal of turbulent flows in the pupil signal
 
 This repository contains a set of routines written in R for pupilometry artifact removal. The main algorithm, described in [1], detects slow and high-frequency turbulences produced by changes in retinal luminance (e.g. due to blinks) and removes them without affecting pupil activity related to cognitive processes. We call this turbulent activity “responses to ocular events” (ROEs). The algorithm is unsupervised, meaning that it does not rely on any artifact benchmark. It was specifically designed to enhance the estimation of cognitive-related pupil activity during complex motor tasks.
