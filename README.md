@@ -20,7 +20,7 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 #install.packages('signal')
 #install.packages('imputeFin')
 #install.packages('imputeTS')
-source("fn.R") #load functions to the environment
+source('fn.R') #load functions to the environment
 y <- read.csv('blinks.csv')$x #read the data
 ry <- pup.med(y, ant=0.1, post=0.2, method="t-Student")
 y <- ry$Pupildata #reconstructed pupil signal
@@ -28,11 +28,11 @@ y <- ry$Pupildata #reconstructed pupil signal
 #Plot the reconstructed data
 duration <- length(y)/30
 arg <- seq(0,duration,duration/length(y))[1:length(y)]
-plot(arg, y, ylab="Pupil diameter", xlab="Time (s)", type="l", main="ROE correction")
-lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=NA), col="orange")
-lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=10), col="darkgreen", lwd=2)
-legend("topright",legend=c("Artifact corrected signal", "ROE corrected signal", "Final smoothing"),
-       col=c("black", "orange", "darkgreen"), lwd=c(1,1,2), cex=0.8, bg='lightblue')
+plot(arg, y, ylab='Pupil diameter', xlab='Time (s)', type='l', main='ROE correction')
+lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=NA), col='orange')
+lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=10), col='darkgreen', lwd=2)
+legend('topright',legend=c('Artifact corrected signal', 'ROE corrected signal', 'Final smoothing'),
+       col=c('black', 'orange', 'darkgreen'), lwd=c(1,1,2), cex=0.8, bg='lightblue')
 
 y <- pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=10)
 ```
