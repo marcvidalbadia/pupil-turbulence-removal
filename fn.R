@@ -3,7 +3,7 @@ pup.med <- function(y, ant=0.1, post=0.2, sp=30, method=c("t-Student","Gaussian"
   ##' y: a pupillary time series containing blink artifacts
   ##' ant: time before artifact onset (sec.)
   ##' post: time after artifact onset (sec.)
-  ##' sp: sampling rate of x
+  ##' sp: sampling rate of x (30 Hz by default)
   
   if (!(inherits(y, "numeric")))
     stop("Argument y not a numeric object")
