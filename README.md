@@ -16,7 +16,7 @@ The removal of ROEs is conducted in two steps, which allows to detect different 
 
 ## Methods in practice
 ```R
-#Uncomment to install the packages
+#Uncomment to install the packages if necessary
 #install.packages('signal')
 #install.packages('imputeFin')
 #install.packages('imputeTS')
