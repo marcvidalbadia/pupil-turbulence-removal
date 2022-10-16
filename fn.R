@@ -75,10 +75,10 @@ turbulence.corrector <- function(x, W=c(0,0.015), sd.factor=2.5) {
       }else {
         which(diff(diff(x)>0)>0)+1
       }
-    }else {
+    } else {
       if (partial){
         which(diff(c(TRUE,diff(x)>=0,FALSE))<0)
-      }else {
+      } else {
         which(diff(diff(x)>=0)<0)+1
       }
     }
