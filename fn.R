@@ -3,7 +3,7 @@ pup.med <- function(y, ant=0.1, post=0.2, sp=30, method=c("t-Student","Gaussian"
   ##' y: a pupillary time series containing blink artifacts
   ##' ant: time before artifact onset (sec.)
   ##' post: time after artifact onset (sec.)
-  ##' sp: sampling rate of x (30 Hz by default)
+  ##' sp: sampling rate of x
   
   if (!(inherits(y, "numeric")))
     stop("Argument y not a numeric object")
@@ -58,7 +58,7 @@ pup.med <- function(y, ant=0.1, post=0.2, sp=30, method=c("t-Student","Gaussian"
   blink.rate <- mean(ratey)
   
   attributes(y) <- NULL
-  pupmed <- list(original,y,outliers,missing,nblinks,blink.rate)
+  pupmed <- list(original, y,outliers,missing,nblinks,blink.rate)
   names(pupmed) <- c("Originaldata","Pupildata","Outliers","Missing","Estimated_blinks","Blink_rate")
   return(pupmed)
 }
@@ -160,7 +160,7 @@ pup.turbulence <- function(y,
     y <- signal::filtfilt(bf,y) + my
   } 
   
-  attr(y, "Turbulence onsets low") <- turb.onset.low 
-  attr(y, "Turbulence onsets high") <- turb.onset.high
+  attr(y, "Turbulence onsets low freq.") <- turb.onset.low 
+  attr(y, "Turbulence onsets high freq.") <- turb.onset.high
   return(y)
 }
