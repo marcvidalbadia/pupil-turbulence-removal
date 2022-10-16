@@ -58,7 +58,7 @@ pup.med <- function(y, ant=0.1, post=0.2, sp=30, method=c("t-Student","Gaussian"
   blink.rate <- mean(ratey)
   
   attributes(y) <- NULL
-  pupmed <- list(original, y,outliers,missing,nblinks,blink.rate)
+  pupmed <- list(original,y,outliers,missing,nblinks,blink.rate)
   names(pupmed) <- c("Originaldata","Pupildata","Outliers","Missing","Estimated_blinks","Blink_rate")
   return(pupmed)
 }
