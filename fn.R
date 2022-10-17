@@ -142,7 +142,7 @@ pup.turbulence <- function(y,
         append(attributes(y)$`Turbulence onsets`,turb.onset.low)
   }
   
-  #High frequency ROE correction.
+  #High frequency ROE correction
   y <- y-(my2 <- mean(y))
   turb.onset.high<- c()
   for (turbi in seq(0.04,0.1,0.001)) {
