@@ -86,7 +86,6 @@ turbulence.corrector <- function(x, W=c(0,0.015), sd.factor=2.5) {
   
   bf <- signal::butter(3, W=W, type="pass")
   y1 <- signal::filtfilt(bf,x)
-  #lines(arg,y1+my, col="grey",lwd=.3)
   dy1 <- diff(y1)
   minimas <- which.peaks(dy1, partial = FALSE, decreasing = TRUE)
   maximas <- which.peaks(dy1, partial = FALSE, decreasing = FALSE)
