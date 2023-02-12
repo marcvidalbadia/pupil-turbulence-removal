@@ -1,4 +1,4 @@
-Supplementary Online Material for M. Vidal, K. E. Onderdijk, A. M. Aguilera, J. Six, P-J. Maes and T. H. Fritz, M. Leman. "Cholinergic-related pupil activity reflects level of emotionality during motor performance", 2022. (Under review)
+Supplementary Online Material for Vidal, M., Onderdijk, K. E., Aguilera, A. M., Six, J., Maes, P-J.  and Fritz, T. H., Leman, M.  "Cholinergic-related pupil activity reflects level of emotionality during motor performance", 2022. (Under review)
 
 ## Removal of turbulent flows in the pupil signal
 
