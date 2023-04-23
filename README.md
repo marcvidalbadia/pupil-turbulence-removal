@@ -31,7 +31,7 @@ duration <- length(y)/30
 arg <- seq(0,duration,duration/length(y))[1:length(y)]
 plot(arg, y, ylab='Pupil diameter', xlab='Time (s)', type='l', main='ROE correction')
 lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=NA), col='orange')
-lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=10), col='darkgreen', lwd=2)
+lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=1.6), col='darkgreen', lwd=2)
 legend('topright',legend=c('Artifact corrected signal', 'ROE corrected signal', 'Final smoothing'),
        col=c('black', 'orange', 'darkgreen'), lwd=c(1,1,2), cex=0.8, bg='lightblue')
 
