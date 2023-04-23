@@ -127,8 +127,8 @@ pup.turbulence <- function(y,
                            Nf=15,
                            LPF=NA) {
   ##' y: reconstructed pupil time series with pup.med function
-  ##' sd.factor.low: hyperparameter to detect low frequency turbulence; NA = not applicable
-  ##' sd.factor.high: hyperparameter to detect high frequency turbulences; NA = not applicable
+  ##' sd.factor.low: hyperparameter to detect low frequency turbulence; NA = slow freq. ROE correction is not applied
+  ##' sd.factor.high: hyperparameter to detect high frequency turbulences; NA = high freq. ROE correction is not applied
   ##' Nf: Nyquist frequency 
   ##' LPF: final smoothing
 
