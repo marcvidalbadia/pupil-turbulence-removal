@@ -127,8 +127,8 @@ pup.turbulence <- function(y,
                            Nf=15,
                            LPF=NA) {
   ##' y: reconstructed pupil time series with pup.med function
-  ##' sd.factor.low: hyperparameter to detect low frequency turbulences
-  ##' sd.factor.high: hyperparameter to detect high frequency turbulences
+  ##' sd.factor.low: hyperparameter to detect low frequency turbulence; NA = not applicable
+  ##' sd.factor.high: hyperparameter to detect high frequency turbulences; NA = not applicable
   ##' Nf: Nyquist frequency 
   ##' LPF: final smoothing
 
@@ -136,19 +136,23 @@ pup.turbulence <- function(y,
     stop("Argument y not a numeric object")
   N <- length(y)
   
-  #Low frequency ROE correction
   y <- y-(my <- mean(y))
+  
+  #Low frequency ROE correction
+  turb.onset.low <- NA
+  if (!is.na(sd.factor.low)) {
   turb.onset.low <- c()
   for (turbi in seq(0.03/Nf,4/Nf,0.015/Nf)) {
     y <- turbulence.corrector(y[1:N],W=c(0,turbi), sd.factor=sd.factor.low)
     if (length(attributes(y)$`Turbulence onsets`)!=0) turb.onset.low <- 
         append(attributes(y)$`Turbulence onsets`,turb.onset.low)
-  }
+  }}
   
-  turb.onset.high <- c(0)
-  if (sd.factor.high!=0) {
   #High frequency ROE correction
+  turb.onset.high <- NA
+  if (!is.na(sd.factor.high)) {
   y <- y-(my2 <- mean(y))
+  turb.onset.high <- c(0)
   for (turbi in seq(0.5/Nf,4/Nf,0.015/Nf)) {
     y <- turbulence.corrector(y[1:N],W=c(0.25/Nf,turbi), sd.factor=sd.factor.high)
     if (length(attributes(y)$`Turbulence onsets`)!=0) turb.onset.high <- 
@@ -168,4 +172,3 @@ pup.turbulence <- function(y,
   attr(y, "Turbulence onsets high freq.") <- turb.onset.high
   return(y)
 }
-
