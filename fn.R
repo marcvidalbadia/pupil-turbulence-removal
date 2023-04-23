@@ -89,7 +89,7 @@ turbulence.corrector <- function(x, W, sd.factor=3) {
   dy1 <- diff(y1)
   minimas <- which.peaks(dy1, partial = FALSE, decreasing = TRUE)
   maximas <- which.peaks(dy1, partial = FALSE, decreasing = FALSE)
-  vmin <- rep(NA,1576)
+  vmin <- rep(NA,length(dy1))
   vmin[minimas] <- dy1[minimas] 
   minart <- which(vmin<median(dy1)-sd.factor*sd(dy1)) #detected turbulences
   for (sm in 1:length(minart)) {#is there more than 1 turbulence?
