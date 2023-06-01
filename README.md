@@ -35,9 +35,9 @@ lines(arg, pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=1.6), col
 legend('topright',legend=c('Artifact corrected signal', 'ROE corrected signal', 'Final smoothing'),
        col=c('black', 'orange', 'darkgreen'), lwd=c(1,1,2), cex=0.8, bg='lightblue')
 
-y <- pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=1.6)
+y <- pup.turbulence(y, sd.factor.high=3*exp(-ry$Blink_rate), LPF=1.6, Nf=15) #Nf is the Nyquist frequency
 ```
-The R function `pup.turbulence` removes pupil turbulences according to [1]. The dispersion hyperparameter for slow turbulences is set by default to 3 (`sd.factor.low=3`); we observed that between 3-5 provides optimal results under constant luminance conditions. For high-frequency turbulences, such as ROE due to blinks, we recommend modeling the hyperparameter as the exponential `3*exp(-ry$Blink_rate)`, where `ry$Blink_rate` is an estimation of the blink rate calculated in the function `pup.med`. By default, the parameter is set to 3. We recommend to perform the final smoothing step using a cutoff frequency between 1 Hz (`LPF=1`) and 4 Hz (`LPF=4`). If `LPF=NA` (default) no smoothing is conducted. 
+The R function `pup.turbulence` removes pupil turbulences according to [1]. The dispersion hyperparameter for slow turbulences is set by default to 3 (`sd.factor.low=3`); we observed that between 3-5 provides optimal results under constant luminance conditions. For high-frequency turbulences, such as ROE due to blinks, we recommend modeling the hyperparameter as the exponential `3*exp(-ry$Blink_rate)`, where `ry$Blink_rate` is an estimation of the blink rate calculated in the function `pup.med`. By default, the parameter is set to 3. We recommend to perform the final smoothing step using a cutoff frequency between 1 Hz (`LPF=1`) and 4 Hz (`LPF=4`). If `LPF=NA` (default) no smoothing is conducted. The functions `pup.turbulence` is configured for 30 Hz sampling frequency.
 
 ## References
 
