@@ -1,6 +1,6 @@
 Supplementary Online Material for M. Vidal, K. E. Onderdijk, A. M. Aguilera, J. Six, P-J. Maes and T. H. Fritz, M. Leman.  "Cholinergic-related pupil activity reflects level of emotionality during motor performance", 2023. (Accepted at the European Journal of Neuroscience)
 
-## Unsupervised Artefact Removal in Pupillometry for Cognitive-Motor Analysis
+## Unsupervised Artifact Removal in Pupillometry for Cognitive-Motor Analysis
 
 This repository contains a set of routines written in R for artefact removal in pupillometry recordings. The main algorithm, described in [1], detects and suppresses both slow and high-frequency fluctuations caused by changes in retinal luminance (e.g., due to blinks). We refer to this artifactual activity as responses to ocular events (ROE). The algorithm is fully unsupervised (it does not require prior labelling of artefacts) and is specifically designed to enhance the estimation of cognitively driven pupil responses during complex motor tasks.
 
